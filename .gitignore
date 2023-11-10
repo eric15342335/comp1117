@@ -1,2 +1,4 @@
 # copyrighted
 *.pdf
+# JetBrains PyCharm
+.idea/
