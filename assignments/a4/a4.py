@@ -1,14 +1,17 @@
 """
 COMP1117A Assignment 4
 Author: Cheng Ho Ming, Eric
-Coding conventions:
-    Functions with leading underscore (_) has return values.
-    Functions without leading underscore (_) are responsible for printing. No return values.
-    This file is written in PyCharm IDE. It must give no warnings or errors under the PyCharm linter.
 """
 # For Python 3.7/3.8 compatibility
 # Support type hints with subscript, e.g. list[str]
 from __future__ import annotations
+
+"""
+Data structure for global_booking_list:
+List of [<name>, <8-length telephone number>, <DD-MM-YYYY>, <number of seats>, <ticket code>]
+Data structure for global_table_allocated:
+List of [<DD-MM-YYYY>, <ticket code>, <table number>]
+"""
 
 
 def _load_files(filename: str) -> tuple[list, int]:
@@ -105,7 +108,7 @@ def list_bookings(global_booking_list, global_table_allocated: list) -> None:
 
 def _table_allocated_for(date, ticket_code: str, global_table_allocated: list) -> int | None:
     """
-    This function takes a date, table_number and ticket_code to check whether a booking has table allocated.
+    This function takes a date, ticket_code to check whether a booking has table allocated.
     If the booking has no table allocated, it returns None.
     """
     # We can use list comprehension (PEP 202) to filter out the bookings that are not
@@ -128,7 +131,7 @@ def _table_exists(table_number: str, table_file_list: list) -> bool:
 def _allocate_table(global_table_allocated: list, table_file_list: list,
                     date: str,
                     ticket_code: str,
-                    table_number: str,) -> int:
+                    table_number: str, ) -> int:
     """
     This function takes a date, a ticket code, and a table number and adds the
     table number to the global table allocated list.
@@ -164,14 +167,6 @@ def allocate_table(global_table_allocated: list, table_file_list: list,
         print("Error: Table not found.")
 
 
-"""
-Data structure for global_booking_list:
-List of [<name>, <8-length telephone number>, <DD-MM-YYYY>, <number of seats>, <ticket code>]
-Data structure for global_table_allocated:
-List of [<DD-MM-YYYY>, <ticket code>, <table number>]
-"""
-
-
 def main() -> None:
     """
     Procedure of the main program:
@@ -203,7 +198,8 @@ def main() -> None:
         if command[0] == "Exit":
             print("Bye")
             break
-        print(booking_list, table_allocated)
+        # For debugging purposes.
+        # print(booking_list, table_allocated)
 
 
 if __name__ == "__main__":
