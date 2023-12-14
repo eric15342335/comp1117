@@ -6,6 +6,7 @@ def multiply(a, b):
         return 0
     return multiply(a, b - 1) + a
 
+
 a = int(input())
 b = int(input())
 print(multiply(a, b))

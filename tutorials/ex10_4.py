@@ -1,5 +1,5 @@
 # for base 11-16
-hex_string = 'ABCDEF'
+hex_string = "ABCDEF"
 
 
 def convert_base(_n, _b: int) -> str:
@@ -22,7 +22,7 @@ n = int(input())
 b = int(input())
 print(convert_base(n, b))
 
-assert convert_base(13, 2) == '1101'
-assert convert_base(56, 4) == '320'
-assert convert_base(1117, 8) == '2135'
-assert convert_base(2019, 16) == '7E3'
+assert convert_base(13, 2) == "1101"
+assert convert_base(56, 4) == "320"
+assert convert_base(1117, 8) == "2135"
+assert convert_base(2019, 16) == "7E3"

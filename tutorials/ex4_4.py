@@ -17,7 +17,7 @@ while True:
     print(sum(factors(num)) == num)
     # continue input? Y/N
     match = input()
-    if match == 'Y':
+    if match == "Y":
         continue
     else:
         break

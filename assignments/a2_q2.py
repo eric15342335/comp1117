@@ -20,9 +20,9 @@ def rotate(a: str, b: int) -> int:
 
 if mode == 1:
     for i in text:
-        print(chr(rotate(i, key)), end='')
+        print(chr(rotate(i, key)), end="")
 elif mode == 2:
     for i in text:
-        print(chr(rotate(i, -key)), end='')
+        print(chr(rotate(i, -key)), end="")
 else:
     print("Invalid mode")

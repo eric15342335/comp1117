@@ -9,5 +9,5 @@ while True:
     if min_of > user:
         min_of = user
 
-print('sum =', sum_of)
-print('min =', min_of)
+print("sum =", sum_of)
+print("min =", min_of)

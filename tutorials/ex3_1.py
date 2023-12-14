@@ -1,1 +1,1 @@
-print(abs(int(input())-int(input())))
+print(abs(int(input()) - int(input())))

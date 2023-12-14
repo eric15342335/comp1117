@@ -1,5 +1,5 @@
 def sqr(x: int) -> int:
-    return x ** 2
+    return x**2
 
 
 # print square values between first input and second input (inclusive)

@@ -17,5 +17,5 @@ def findNo(a: set, b: int) -> bool:
 # Given code
 # Please do not change the code below
 mySet = readSet()
-number = int(input('Find number? '))
+number = int(input("Find number? "))
 print(findNo(mySet, number))

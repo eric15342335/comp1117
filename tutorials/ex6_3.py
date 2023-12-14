@@ -17,7 +17,6 @@ def calSum(a: list) -> int:
     return temp
 
 
-
 # Given code
 # Please do not change the code below
 myList = readList()

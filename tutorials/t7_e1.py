@@ -11,4 +11,4 @@ while True:
     if user == "COUNT":
         print(len(num))
     if user == "AVERAGE":
-        print(sum(num)/len(num))
+        print(sum(num) / len(num))

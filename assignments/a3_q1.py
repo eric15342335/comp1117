@@ -11,6 +11,7 @@ k = int(input())
 
 # End of your implementation ------
 
+
 def isExist(selected: list, counter, loops: int) -> bool:
     # Begin of your implementation ------
     if loops == 0:  # base case

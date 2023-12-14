@@ -9,7 +9,7 @@ def print_inventory(inventory):
 def read_inventory():
     """
     Read the inventory from the input and return it as a dictionary.
-       e.g. {'Sprite':[4, 3], 'Orange_juice':[3, 1]}. 
+       e.g. {'Sprite':[4, 3], 'Orange_juice':[3, 1]}.
             This means there are three $4 Sprite and one $3 Oriange_juice in the inventory.
     """
     # Begin of your implementation ------
@@ -25,7 +25,7 @@ def read_inventory():
 
 def insert_coin(total_coin, coin_value):
     # Begin of your implementation ------
-    total = total_coin+coin_value
+    total = total_coin + coin_value
     print(f"Inserted a ${coin_value} coin. Total: ${total}.")
     return total
     # End of your implementation ------
@@ -37,7 +37,7 @@ def return_coins(total_coin):
     total_returned = 0
     for i in returned.keys():
         while True:
-            if total_coin-i>=0:
+            if total_coin - i >= 0:
                 total_coin -= i
                 returned[i] += 1
                 total_returned += i
@@ -72,24 +72,26 @@ def buy_drink(inventory, total_coin, drink_name):
         else:
             print(f"Out of stock! {drink_name} is sold out.")
     else:
-        print(f"Insufficient money to buy {drink_name}! Inserted: ${total_coin}, Required: ${price}.")
+        print(
+            f"Insufficient money to buy {drink_name}! Inserted: ${total_coin}, Required: ${price}."
+        )
     return inventory, total_coin
     # End of your implementation ------
 
 
-if __name__ =='__main__':
+if __name__ == "__main__":
     inventory = read_inventory()
     print_inventory(inventory)
     total_coin = 0
     while True:
         s = input()
-        if s.startswith('Insert'):
-            vals =s.split(' ')
+        if s.startswith("Insert"):
+            vals = s.split(" ")
             total_coin = insert_coin(total_coin, int(vals[1]))
-        elif s.startswith('Return'):
+        elif s.startswith("Return"):
             total_coin = return_coins(total_coin)
-        elif s.startswith('Buy'):
-            vals =s.split(' ')
+        elif s.startswith("Buy"):
+            vals = s.split(" ")
             inventory, total_coin = buy_drink(inventory, total_coin, vals[1])
         elif s == "Exit":
             if total_coin > 0:
