@@ -12,7 +12,7 @@ def rotate(a: str, b: int) -> int:
             c = 26 + c
     elif a.isupper():
         if c > 90:
-            c = c % 90 + 65
+            c = c % 90 + 64
         if c < 65:
             c = 26 + c
     return c
